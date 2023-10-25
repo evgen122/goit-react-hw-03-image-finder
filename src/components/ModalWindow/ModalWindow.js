@@ -23,7 +23,7 @@ export const ModalWindow = ({
   src,
   alt,
 }) => {
-  console.log(isModalState);
+  // console.log(isModalState);
 
   return (
     <Modal

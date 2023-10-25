@@ -27,7 +27,7 @@ export class ImageGalleryItem extends Component {
       item: { id, webformatURL, largeImageURL, tags },
     } = this.props;
 
-    console.log('state', isModalState);
+    // console.log('state', isModalState);
 
     return (
       <li className="gallery-item" key={id} onClick={this.stateСhangeModal}>
