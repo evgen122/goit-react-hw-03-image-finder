@@ -20,13 +20,16 @@ export class App extends Component {
   }
 
   async componentDidUpdate(prevProps, prevState) {
-    if (this.state.filter !== '' && prevState.filter !== this.state.filter) {
+    if (
+      (this.state.filter !== '' && prevState.filter !== this.state.filter) ||
+      prevState.page !== this.state.page
+    ) {
       this.addListImg();
     }
 
-    if (prevState.page !== this.state.page) {
-      this.addListImg();
-    }
+    // if (prevState.page !== this.state.page) {
+    //   this.addListImg();
+    // }
   }
 
   addSearch = newSearch => {
