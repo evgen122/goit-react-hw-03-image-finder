@@ -1,4 +1,5 @@
-import { useState } from 'react';
+// import { visible } from 'basiclightbox';
+// import { useState } from 'react';
 // import Button from 'react-bootstrap/Button';
 // import Modal from 'react-bootstrap/Modal';
 
@@ -52,6 +53,7 @@ import { useState } from 'react';
 // };
 // ===========================================
 
+// ==========================================
 import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
@@ -59,6 +61,8 @@ Modal.setAppElement('#root');
 const customStyles = {
   overlay: {
     backgroundColor: '#4e4a48',
+    // visibility: 'visible',
+    // visibility: 'hidden',
   },
   content: {
     top: '50%',
@@ -70,14 +74,15 @@ const customStyles = {
   },
 };
 
-export const ModalWindow = ({ isStateModal, isClose, src, alt }) => {
-  console.log(isStateModal);
+export const ModalWindow = ({ isModalState, isClose, openModal, src, alt }) => {
+  console.log(isModalState);
 
   return (
     <Modal
-      isOpen={isStateModal}
-      onRequestClose={isClose}
-      shouldCloseOnOverlayClick={true}
+      // onClick={isClose}
+      isOpen={isModalState}
+      onRequestClose={openModal}
+      // shouldCloseOnOverlayClick={false}
       style={customStyles}
       contentLabel="onRequestClose"
     >
