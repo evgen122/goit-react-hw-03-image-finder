@@ -74,21 +74,24 @@ const customStyles = {
   },
 };
 
-export const ModalWindow = ({ isModalState, isClose, openModal, src, alt }) => {
+export const ModalWindow = ({
+  isModalState,
+  isClose,
+  stateСhangeModal,
+  src,
+  alt,
+}) => {
   console.log(isModalState);
 
   return (
     <Modal
       // onClick={isClose}
       isOpen={isModalState}
-      onRequestClose={openModal}
-      // shouldCloseOnOverlayClick={false}
+      onRequestClose={stateСhangeModal}
       style={customStyles}
       contentLabel="onRequestClose"
     >
       <img src={src} alt={alt} width="800" />
-
-      <button onClick={isClose}>Close</button>
     </Modal>
   );
 };

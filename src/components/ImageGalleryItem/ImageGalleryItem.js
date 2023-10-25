@@ -15,7 +15,7 @@ export class ImageGalleryItem extends Component {
   //   }
   // }
 
-  openModal = () => {
+  stateСhangeModal = () => {
     if (this.state.isModalState === true) {
       this.setState({ isModalState: false });
     } else {
@@ -24,9 +24,9 @@ export class ImageGalleryItem extends Component {
     // this.setState({ isModalState: true });
   };
 
-  onCloseModal = () => {
-    this.setState({ isModalState: false });
-  };
+  // onCloseModal = () => {
+  //   this.setState({ isModalState: false });
+  // };
 
   render() {
     const { isModalState } = this.state;
@@ -56,13 +56,13 @@ export class ImageGalleryItem extends Component {
     // };
 
     return (
-      <li className="gallery-item" key={id} onClick={this.openModal}>
+      <li className="gallery-item" key={id} onClick={this.stateСhangeModal}>
         <ItemImg src={webformatURL} alt={tags} />
 
         <ModalWindow
-          openModal={this.openModal}
+          stateСhangeModal={this.stateСhangeModal}
           isModalState={isModalState}
-          isClose={this.onCloseModal}
+          // isClose={this.onCloseModal}
           src={largeImageURL}
           alt={tags}
         />
